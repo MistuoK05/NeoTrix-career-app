@@ -12,8 +12,8 @@ const genAI = new GoogleGenerativeAI(API_KEY);
  * This function is called in App.jsx when the form is submitted.
  */
 export const analyzeCareerPath = async (studentData, currentScores) => {
-  // Using the stable flash model for real-time dashboard updates
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  // Using the stable pro model for real-time dashboard updates
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
   const prompt = `
     As an AI Career Mentor for Track 3: AI/ML for Beginners, analyze this student profile:
@@ -52,7 +52,7 @@ export const analyzeCareerPath = async (studentData, currentScores) => {
  * Returns a score to update the 'Growth Matrix' graph.
  */
 export const evaluateTask = async (taskType, data) => {
-  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
   const prompts = {
     interview: `Grade this AI/ML MCQ Interview. Answers: ${JSON.stringify(data.results)}. Return JSON: {"score": 25, "feedback": "Critique"}`,

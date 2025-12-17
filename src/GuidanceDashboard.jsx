@@ -3,6 +3,7 @@ import MockInterview from './MockInterview';
 import CodingSandbox from './CodingSandbox';
 import ConceptDiagnostic from './ConceptDiagnostic';
 
+
 // Added aiAnalysis to the destructuring of props
 // In GuidanceDashboard.jsx
 const GuidanceDashboard = ({ userData, aiAnalysis, skillScores, onUpdateSkill, onBack }) => {
